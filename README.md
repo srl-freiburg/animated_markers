@@ -6,23 +6,26 @@ Animated mesh marker visualization plugin and accompanying ROS messages for Rviz
 
 Motivation
 ----------
-Rviz currently does not play back animations contained in 3D meshes loaded from a visualization_msgs/Marker with type MESH_RESOURCE.
+Rviz currently does not play back animations contained in 3D meshes loaded from a ```visualization_msgs/Marker with type MESH_RESOURCE```.
 This might be useful for displaying nice visualizations of e.g. walking persons in an environment.
 
-Instead of modifying the source code of the original Rviz default_plugin, the animated_marker_rviz_plugin replicates part of that code
+Instead of modifying the source code of the original Rviz ```default_plugin```, the ```animated_marker_rviz_plugin``` replicates part of that code
 and adds the required functionality specific to this purpose.
 
 Example
 -------
-Run "roslaunch animated_marker_tutorial animated_walking_man.launch" to publish example markers and see the visualization in Rviz.
+Run the following to publish example markers and see the visualization in Rviz.
 
+```
+roslaunch animated_marker_tutorial animated_walking_man.launch
+``` 
 Usage
 -----
-The usage of this package is very similar to using visualization_msgs/MarkerArray and visualization_msgs/Marker. Instead, just publish
-animated_marker_msgs/MarkerArray. The only supported marker type is AnimatedMarker.MESH_RESOURCE.
+The usage of this package is very similar to using ```visualization_msgs/MarkerArray and visualization_msgs/Marker```. Instead, just publish
+```animated_marker_msgs/MarkerArray```. The only supported marker type is ```AnimatedMarker.MESH_RESOURCE```.
 
 The animated_marker_rviz_plugin automatically registers itself with Rviz once the package is sourced (type eg. "source devel/setup.sh"
-in your catkin workspace). You can then add an "AnimatedMarkerArray" display by clicking on the "Add display" button.
+in your catkin workspace). You can then add an ```AnimatedMarkerArray``` display by clicking on the "Add display" button.
 
 Supported animation formats
 ---------------------------
