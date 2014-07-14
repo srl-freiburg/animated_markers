@@ -1,0 +1,5 @@
+<launch>
+    <node name="animated_marker_publisher" type="animated_walking_man.py" pkg="animated_marker_tutorial"/>
+
+    <node name="rviz" type="rviz" pkg="rviz" output="screen" args="-d $(find animated_marker_tutorial)/launch/visualization.rviz"/>
+</launch>
