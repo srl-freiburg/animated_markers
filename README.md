@@ -3,6 +3,8 @@ animated_markers
 
 Animated mesh marker visualization plugin and accompanying ROS messages for Rviz
 
+NOTE: This Rviz plugin has only been tested on ROS Hydro. It will not work on ROS Groovy.
+
 
 Motivation
 ----------
