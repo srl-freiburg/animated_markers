@@ -151,6 +151,9 @@ void MeshResourceMarker::onNewMessage(const MarkerConstPtr& old_message, const M
     Ogre::ResourceGroupManager::getSingleton().setLoadingListener(newListener);
     bool loadFailed = loadMeshFromResource(new_message->mesh_resource).isNull();
     Ogre::ResourceGroupManager::getSingleton().setLoadingListener(oldListener);
+
+    delete newListener;
+    
     
     if (loadFailed)
     {
